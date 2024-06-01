@@ -6,7 +6,7 @@
             <Processing v-if="processing" :text="processing" />
             <div class="w-full mb-3">
                 <Label for="email" text="Email Address" />
-                <Input id="email" type="text" v-model="email" />
+                <Input id="email" type="email" v-model="email" />
                 <Error v-if="errors.email" :text="errors.email" />
             </div>
             <div class="w-full mb-3">

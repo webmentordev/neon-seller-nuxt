@@ -8,10 +8,7 @@
             <Input v-model="name" type="text" placeholder="Category title" />
             <Button class="ml-3" text="Create" />
         </form>
-        <div v-if="pending">
-            <Loading />
-        </div>
-        <table v-else class="w-full rounded-xl overflow-hidden text-sm bg-white shadow-md">
+        <table class="w-full rounded-xl overflow-hidden text-sm bg-white shadow-md">
             <tr class="bg-black text-white">
                 <th class="text-start p-2">Name</th>
                 <th class="text-start">Slug</th>
@@ -47,13 +44,10 @@
     const config = useRuntimeConfig().public.api;
     const cookie = useCookie('auth_cookie');
 
-    const { data, pending } = await useLazyFetch(`${config}/api/auth/categories`, {
-        headers: { Authorization: `Bearer ${cookie.value.token}` },
-        server: false
+    const data = await $fetch(`${config}/api/auth/categories`, {
+        headers: { Authorization: `Bearer ${cookie.value.token}` }
     });
-    if(data.value){
-        result.value = data.value.data;
-    }
+    result.value = data.data;
 
     const failed = ref(null);
     const success = ref(null);
