@@ -16,6 +16,8 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
     
     'storage' => env('STORAGE', ''),
+
+    'stripe' => env('STRIPE', ''),
     /*
     |--------------------------------------------------------------------------
     | Application Environment

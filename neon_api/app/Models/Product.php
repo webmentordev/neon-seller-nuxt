@@ -27,7 +27,4 @@ class Product extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
-    public function active_category(){
-        return $this->belongsTo(Category::class)->where('is_active', true);
-    }
 }
