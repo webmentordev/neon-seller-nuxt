@@ -30,11 +30,11 @@
 
 <style>
     .ql-container {
-        min-height: 100px;
+        min-height: 150px;
         height: 100%;
     }
     .ql-editor{
-        min-height: 100px;
+        min-height: 150px;
         height: 100%;
     }
 </style>

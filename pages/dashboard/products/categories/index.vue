@@ -16,6 +16,7 @@
                 <th class="text-start">Active Products</th>
                 <th class="text-end">Status</th>
                 <th class="text-end p-2">Created</th>
+                <th class="text-end p-2">Updated</th>
             </tr>
             <tr v-for="item in result" :key="item.id" class="border-b border-gray-100 last:border-none">
                 <td class="text-start p-2">{{ item.name }}</td>
@@ -23,10 +24,11 @@
                 <td class="text-start">{{ item.products_count }}</td>
                 <td class="text-start">{{ item.active_products_count }}</td>
                 <td class="text-end cursor-pointer">
-                    <span v-if="item" class="bg-green-500/10 text-green-800 py-1 px-2 rounded-lg font-bold">Active</span>
+                    <span v-if="item.is_active" class="bg-green-500/10 text-green-800 py-1 px-2 rounded-lg font-bold">Active</span>
                     <span v-else class="bg-red-500/10 text-red-800 py-1 px-2 rounded-lg font-bold">Inactive</span>
                 </td>
-                <td class="text-end p-2">{{ item.created_at }}</td>
+                <td class="text-end p-2">{{ item.created }}</td>
+                <td class="text-end p-2">{{ item.updated }}</td>
             </tr>
         </table>
     </div>  
