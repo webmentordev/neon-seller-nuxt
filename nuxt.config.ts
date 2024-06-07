@@ -1,15 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-icon'
-  ],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', "@nuxt/image"],
   runtimeConfig: {
     'api': process.env.NUXT_API,
     public: {
       'api': process.env.NUXT_PUBLIC_API,
     }
+  },
+  image: {
+    domains: ['localhost:8000']
   },
   app: {
     head: {

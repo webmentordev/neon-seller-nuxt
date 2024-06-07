@@ -1,31 +1,33 @@
 <template>
-    <section class="max-w-2xl w-full m-auto py-12">
-        <h1 class="text-4xl mb-6">Create an account!</h1>
-        <form @submit.prevent="signupHandler">
-            <Failed v-if="failed" :text="failed" />
-            <Processing v-if="processing" :text="processing" />
-            <div class="w-full mb-3">
-                <Label for="name" text="Full name" />
-                <Input id="name" type="text" v-model="name" />
-                <Error v-if="errors.name" :text="errors.name" />
-            </div>
-            <div class="w-full mb-3">
-                <Label for="email" text="Email Address" />
-                <Input id="email" type="email" v-model="email" />
-                <Error v-if="errors.email" :text="errors.email" />
-            </div>
-            <div class="w-full mb-3">
-                <Label for="password" text="Password" />
-                <Input id="password" type="password" v-model="password" />
-                <Error v-if="errors.password" :text="errors.password" />
-            </div>
-            <div class="w-full mb-3">
-                <Label for="confirm_password" text="Confirm password" />
-                <Input id="confirm_password" type="password" v-model="confirm_password" />
-                <Error v-if="errors.confirm_password" :text="errors.confirm_password" />
-            </div>
-            <Button text="Signup" />
-        </form>
+    <section class="h-[90vh] flex items-center justify-center">
+        <div class="max-w-lg w-full m-auto p-8 rounded-2xl shadow-md border border-gray-100">
+            <h1 class="text-4xl mb-6">Create an account!</h1>
+            <form @submit.prevent="signupHandler">
+                <Failed v-if="failed" :text="failed" />
+                <Processing v-if="processing" :text="processing" />
+                <div class="w-full mb-3">
+                    <Label for="name" text="Full name" />
+                    <Input id="name" type="text" v-model="name" />
+                    <Error v-if="errors.name" :text="errors.name" />
+                </div>
+                <div class="w-full mb-3">
+                    <Label for="email" text="Email Address" />
+                    <Input id="email" type="email" v-model="email" />
+                    <Error v-if="errors.email" :text="errors.email" />
+                </div>
+                <div class="w-full mb-3">
+                    <Label for="password" text="Password" />
+                    <Input id="password" type="password" v-model="password" />
+                    <Error v-if="errors.password" :text="errors.password" />
+                </div>
+                <div class="w-full mb-3">
+                    <Label for="confirm_password" text="Confirm password" />
+                    <Input id="confirm_password" type="password" v-model="confirm_password" />
+                    <Error v-if="errors.confirm_password" :text="errors.confirm_password" />
+                </div>
+                <Button text="Signup" />
+            </form>
+        </div>
     </section>
 </template>
 

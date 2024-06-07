@@ -1,21 +1,23 @@
 <template>
-    <section class="max-w-2xl w-full m-auto py-12">
-        <h1 class="text-4xl mb-6">Login into account!</h1>
-        <form @submit.prevent="loginHandler">
-            <Failed v-if="failed" :text="failed" />
-            <Processing v-if="processing" :text="processing" />
-            <div class="w-full mb-3">
-                <Label for="email" text="Email Address" />
-                <Input id="email" type="email" v-model="email" />
-                <Error v-if="errors.email" :text="errors.email" />
-            </div>
-            <div class="w-full mb-3">
-                <Label for="password" text="Password" />
-                <Input id="password" type="password" v-model="password" />
-                <Error v-if="errors.password" :text="errors.password" />
-            </div>
-            <Button text="Login" />
-        </form>
+    <section class="h-[90vh] flex items-center justify-center">
+        <div class="max-w-lg w-full m-auto p-8 rounded-2xl shadow-md border border-gray-100">
+            <h1 class="text-4xl mb-6">Login into account!</h1>
+            <form @submit.prevent="loginHandler">
+                <Failed v-if="failed" :text="failed" />
+                <Processing v-if="processing" :text="processing" />
+                <div class="w-full mb-3">
+                    <Label for="email" text="Email Address" />
+                    <Input id="email" type="email" v-model="email" />
+                    <Error v-if="errors.email" :text="errors.email" />
+                </div>
+                <div class="w-full mb-3">
+                    <Label for="password" text="Password" />
+                    <Input id="password" type="password" v-model="password" />
+                    <Error v-if="errors.password" :text="errors.password" />
+                </div>
+                <Button text="Login" />
+            </form>
+        </div>
     </section>
 </template>
 

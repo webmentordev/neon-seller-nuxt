@@ -50,4 +50,13 @@ class ProductController extends Controller
             'message' => 'Product has been added!'
         ], 201);
     }
+
+    public function show(Product $product){
+        if(!$product){ 
+            return response()->json([
+                'message' => 'Product not found!'
+            ], 404);
+        }
+        return new ProductResource($product);
+    }
 }

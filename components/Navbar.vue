@@ -4,7 +4,7 @@
             <NuxtLink to="/">Logo</NuxtLink>
             <ul class="font-semibold flex items-center">
                 <NuxtLink class="px-6" to="/">Home</NuxtLink>
-                <NuxtLink class="px-6" to="/">Products</NuxtLink>
+                <NuxtLink class="px-6" to="/collection">Collection</NuxtLink>
                 <NuxtLink class="px-6" to="/contact">Contact</NuxtLink>
                 <div v-if="!isAuth">
                     <NuxtLink class="px-6" to="/login">Login</NuxtLink>

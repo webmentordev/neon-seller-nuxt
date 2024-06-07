@@ -20,6 +20,7 @@ Route::middleware(['auth:sanctum'])->prefix('auth')->group(function() {
 
 Route::post('/contact/create', [ContactController::class, 'store']);
 Route::get('/products', [ProductController::class, 'active']);
+Route::get('/product/{product:slug}', [ProductController::class, 'show']);
 Route::get('/categories', [CategoryController::class, 'active']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/signup', [AuthController::class, 'store']);
