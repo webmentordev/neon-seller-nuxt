@@ -27,7 +27,8 @@ class ProductResource extends JsonResource
             'image' => config('app.url').'/storage/'.$this->image,
             'created' => $this->created_at->diffForHumans(),
             'updated' => $this->updated_at->diffForHumans(),
-            'category' => $this->category
+            'category' => $this->category,
+            'prices' => $this->prices
         ];
     }
 }

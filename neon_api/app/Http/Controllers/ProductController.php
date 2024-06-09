@@ -11,12 +11,12 @@ use Stripe\StripeClient;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::latest()->with(['category'])->get();
+        $products = Product::latest()->with(['category', 'prices'])->get();
         return ProductResource::collection($products);
     }
 
     public function active(){
-        $products = Product::latest()->where('is_active', true)->get();
+        $products = Product::latest()->where('is_active', true)->with(['prices'])->get();
         return ProductResource::collection($products);
     }
 
