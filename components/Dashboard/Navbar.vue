@@ -8,6 +8,7 @@
             <DashboardLink class="mb-3" to="/dashboard/products" src="gridicons:product">Products</DashboardLink>
             <DashboardLink class="mb-3" to="/dashboard/products/categories" src="solar:pin-list-bold-duotone">Categories</DashboardLink>
             <DashboardLink class="mb-3" to="/dashboard/products/create" src="material-symbols-light:create-new-folder">Add Product</DashboardLink>
+            <DashboardLink class="mb-3" to="/dashboard/products/prices" src="gravity-ui:circle-dollar">Prices</DashboardLink>
             <DashboardLink class="mb-3" to="/dashboard/contacts" src="ri:contacts-fill">Contacts</DashboardLink>
             <DashboardLink class="mb-3" to="/dashboard/orders" src="ri:shopping-bag-4-fill">Orders</DashboardLink>
             <DashboardLink class="mb-3" to="/dashboard/users" src="material-symbols:person">Users</DashboardLink>

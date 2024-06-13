@@ -11,6 +11,7 @@
                 <th class="text-start">Description</th>
                 <th class="text-start">Slug</th>
                 <th class="text-start">Image</th>
+                <th class="text-start">Prices</th>
                 <th class="text-end">Active</th>
                 <th class="text-end">Featured</th>
                 <th class="text-end p-2">Created</th>
@@ -31,6 +32,7 @@
                     <DashboardCard :text="item.slug" />
                 </td>
                 <td class="text-start"><nuxt-link :to="item.image" class="text-blue-600 underline" target="_blank">View</nuxt-link></td>
+                <th class="text-start">{{ item.prices.length }}</th>
                 <td class="text-end cursor-pointer">
                     <span v-if="item.is_active" class="bg-green-500/10 text-green-800 py-1 px-2 rounded-lg font-bold">Active</span>
                     <span v-else class="bg-red-500/10 text-red-800 py-1 px-2 rounded-lg font-bold">InActive</span>
